@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Install & uninstall functions for Node_Clone module.
+ */
+
+/**
+ * Implementation of hook_uninstall.
+ */
+function processclone_uninstall() {
+  variable_del('processclone_method');
+  variable_del('processclone_omitted');
+  variable_del('processclone_nodes_without_confirm');
+  variable_del('processclone_use_node_type_name');
+  variable_del('processclone_menu_links');
+  $types = node_type_get_names();
+  foreach ($types as $type => $name) {
+    variable_del('processclone_reset_' . $type);
+  }
+}
+

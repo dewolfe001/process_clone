@@ -1,0 +1,15 @@
+name = "Process Clone"
+description = "Allows users to clone (copy then edit) an existing node, keeping track of the source node and automatically setting the node author to the current user. A fork of node clone."
+core = 7.x
+
+dependancies[] != node_clone
+
+files[] = views/views_handler_field_node_link_processclone.inc
+configure = admin/config/content/processclone
+
+; Information to be added by Drupal
+version = "7.x-1.0"
+core = "7.x"
+project = "process_clone"
+datestamp = "1484716184"
+
